@@ -1,0 +1,113 @@
+info:
+  name: Get Cửa Hàng
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{url}}/Common/GetThongTinCuaHang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |
+      {
+          "loai": 1
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        var template = `
+        <style type="text/css">
+            .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+            .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+            .tftable tr {background-color:#ffffff;}
+            .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+            .tftable tr:hover {background-color:#e0ffff;}
+        </style>
+
+        <table class="tftable" border="1">
+            <tr>
+                <th>ID Cua Hang</th>
+                <th>Ma Cua Hang</th>
+                <th>Ten Cua Hang</th>
+                <th>Dia Chi Cua Hang</th>
+                <th>Dien Thoai Cua Hang</th>
+                <th>Email Cua Hang</th>
+            </tr>
+            
+            {{#each response}}
+                <tr>
+                    <td>{{IDCuaHang}}</td>
+                    <td>{{MaCuaHang}}</td>
+                    <td>{{TenCuaHang}}</td>
+                    <td>{{DiaChiCuaHang}}</td>
+                    <td>{{DienThoaiCuaHang}}</td>
+                    <td>{{EmailCuaHang}}</td>
+                </tr>
+            {{/each}}
+        </table>
+        `;
+
+        function constructVisualizerPayload() {
+            return {response: res.getBody()};
+        }
+
+        // pm.visualizer.set(template, constructVisualizerPayload());
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetSanPham
+    request:
+      url: "{{url}}/Common/BaoCaoThuChi"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "loai":1,
+              "tungay":"2024-11-12",
+              "denngay":"2024-11-18"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:28:46 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "success": "00",
+                  "msgErr": ""
+              }
+          ]

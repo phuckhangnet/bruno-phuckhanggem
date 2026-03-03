@@ -1,0 +1,30 @@
+info:
+  name: Khách hàng đăng ký tài khoản mới
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/Auth/khach-hang/dang-ky-tai-khoan"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+      "ho":"pham",
+      "ten":"new 1",
+      "taiKhoan":"hauphvn1",
+      "matKhau":"123456"
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

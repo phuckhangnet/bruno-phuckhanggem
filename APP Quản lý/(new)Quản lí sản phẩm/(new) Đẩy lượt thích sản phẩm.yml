@@ -1,0 +1,30 @@
+info:
+  name: (new) Đẩy lượt thích sản phẩm
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/ProductWarehouse/day-luot-thich-san-pham"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idSanPham": 772, 
+      "idNguoidung":11,
+      "soLuot":20,
+      "ngayKetThuc":"2026-02-12",
+      "ngayBatDau":"2025-02-12"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

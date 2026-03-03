@@ -1,0 +1,27 @@
+info:
+  name: Cập nhập nhóm sản phẩm theo danh sách sản phẩm
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/ProductWarehouse/cap-nhap-nhom-san-pham"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+         "IdsSanPham":[1351,1350],
+         "IdsNhomSanPham":[8,9,1]
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

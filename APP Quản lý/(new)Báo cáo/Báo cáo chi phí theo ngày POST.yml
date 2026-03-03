@@ -1,0 +1,31 @@
+info:
+  name: Báo cáo chi phí theo ngày POST
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/Report/BaoCaoChiPhiCuaHangTheoNgay"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: storeID
+      value: "{{store_parent_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "idNguoiDung": 16,
+        "tuNgay": "2025-01-01",
+        "denNgay": "2025-12-31",
+        "storeId": "0,1"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

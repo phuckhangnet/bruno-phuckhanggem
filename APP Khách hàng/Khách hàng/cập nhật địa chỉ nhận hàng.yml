@@ -1,0 +1,30 @@
+info:
+  name: cập nhật địa chỉ nhận hàng
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/customer/cap-nhat-dia-chi-nhan-hang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+      "idDiaChiNhanHang":1292,
+      "macDinh":false,
+      "ho": "check-trung-2",
+      "dienThoai":"0984357636"
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

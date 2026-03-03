@@ -1,0 +1,27 @@
+info:
+  name: lấy danh sách địa chỉ nhận hàng
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/customer/lay-danh-sach-dia-chi-nhan-hang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+        "idKhachHang": 1
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

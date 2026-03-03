@@ -1,0 +1,103 @@
+info:
+  name: Lấy danh sách khách hàng có tồn tại email
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/Customer/danh-sach-khach-hang-co-email"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Báo cáo doanhThu Th
+    request:
+      url: "{{url}}/Report/BaoCaoDoanhThuKhachHangSuDungUngDung"
+      method: GET
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:47:58 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Success",
+              "metadata": [
+                  {
+                      "idKhachHang": 8,
+                      "tenKhachHang": "Nguyễn Thị Ly",
+                      "email": "lynguyen1083@gmail.com",
+                      "soDienThoai": "0937693694",
+                      "ngaySinh": "1983-10-01T00:00:00",
+                      "tongSoDonHang": 5,
+                      "tongSoSanPham": 9,
+                      "tongTien": 36632000
+                  },
+                  {
+                      "idKhachHang": 540,
+                      "tenKhachHang": "Lương Thị Hoài Lê",
+                      "email": "540@email.com",
+                      "soDienThoai": "0918477455",
+                      "ngaySinh": "1984-04-04T00:00:00",
+                      "tongSoDonHang": 1,
+                      "tongSoSanPham": 1,
+                      "tongTien": 2800000
+                  },
+                  {
+                      "idKhachHang": 541,
+                      "tenKhachHang": "Lê đức Minh",
+                      "email": "",
+                      "soDienThoai": "0942618607",
+                      "ngaySinh": "1989-02-05T00:00:00",
+                      "tongSoDonHang": 1,
+                      "tongSoSanPham": 1,
+                      "tongTien": 2500000
+                  },
+                  {
+                      "idKhachHang": 542,
+                      "tenKhachHang": "Thái Thị Minh Hiếu",
+                      "email": "",
+                      "soDienThoai": "0919195854",
+                      "ngaySinh": "1983-08-29T00:00:00",
+                      "tongSoDonHang": 6,
+                      "tongSoSanPham": 6,
+                      "tongTien": 26977250
+                  }
+              ],
+              "statusCodes": 200
+          }

@@ -1,0 +1,7 @@
+info:
+  name: APP Quản lý
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

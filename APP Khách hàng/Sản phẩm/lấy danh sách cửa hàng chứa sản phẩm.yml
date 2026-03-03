@@ -1,0 +1,26 @@
+info:
+  name: lấy danh sách cửa hàng chứa sản phẩm
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/sanPham/lay-danh-sach-cua-hang-san-pham"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idSanPham":1012
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

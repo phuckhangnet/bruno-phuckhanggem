@@ -1,0 +1,7 @@
+info:
+  name: (new)Employee/Store
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

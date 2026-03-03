@@ -1,0 +1,79 @@
+info:
+  name: Tao dia diem checking Copy
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url_old}}/Check/CheckInCheckOut"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "IDNguoiDung": "1",
+        "IDThietBi": "IDThietBi",
+        "NenTangThietBi": "NenTangThietBi",
+        "ChuoiCheck": "PhucKhangGems",
+        "LoaiCheck": "1",
+        "NgayGioCheck": "2024-08-29 17:38:49.0000000",
+        "Lati": "106.10.744393991504953",
+        "Longi": "106.69879981500583",
+        "TenLoaiCheck": ""
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetSanPham
+    request:
+      url: "{{url}}/Common/BaoCaoThuChi"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "loai":1,
+              "tungay":"2024-11-12",
+              "denngay":"2024-11-18"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:28:46 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "success": "00",
+                  "msgErr": ""
+              }
+          ]

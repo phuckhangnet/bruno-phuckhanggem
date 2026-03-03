@@ -1,0 +1,31 @@
+info:
+  name: Đăng kí bằng tài khoản
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/Customer/Dang-ky"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+      "email":"test3",
+      "ho":"pham",
+      "ten":"hau",
+      "taiKhoan":"0967900803",
+      "matKhau":"123456"
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

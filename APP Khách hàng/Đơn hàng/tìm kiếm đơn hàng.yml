@@ -1,0 +1,30 @@
+info:
+  name: tìm kiếm đơn hàng
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/customer/don-hang/tim-kiem"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "IDKhachHang": 721,
+          "SearchText": "",
+          "IDTinhTrang": "8",
+          "PageNumber": 1,
+          "PageSize": 10
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: Nhập số lượng sản phẩm
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{url}}/ProductWarehouse/ImportAmountProduct"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: '{"idSanPham": 1041, "soLuong": 11, "userId": 12}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

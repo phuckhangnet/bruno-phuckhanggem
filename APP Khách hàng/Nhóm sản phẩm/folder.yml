@@ -1,0 +1,7 @@
+info:
+  name: Nhóm sản phẩm
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

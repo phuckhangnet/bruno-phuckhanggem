@@ -1,0 +1,31 @@
+info:
+  name: Báo cáo đơn hàng theo trạng thái vận chuyển POST
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/Report/BaoCaoChiTietDonHangVanChuyenTheoNgay"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |
+      {
+      // ?idNguoiDung=69&tuNgay=2022-01-01&denNgay=2024-12-31&storeId=0&top=2
+       "idNguoiDung": 11,
+        "tuNgay": "2021-01-13",
+        "denNgay": "2024-12-14",
+        "storeId": "0,1",
+        "top":10
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

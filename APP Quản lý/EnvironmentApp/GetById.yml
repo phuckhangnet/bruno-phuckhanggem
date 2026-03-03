@@ -1,0 +1,80 @@
+info:
+  name: GetById
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/EnvApp/GetById?Id=2"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  params:
+    - name: Id
+      value: "2"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetById
+    request:
+      url: "{{url}}/EnvApp/GetById?Id=2"
+      method: GET
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      params:
+        - name: Id
+          value: "2"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:36:36 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "data": {
+                  "Id": 2,
+                  "Name": "Demo PhucKhang",
+                  "Domain": "DEMO",
+                  "IsActive": 1,
+                  "CreatedDate": "2024-08-07T14:49:23.643",
+                  "UpdatedDate": null,
+                  "UpdatedBy": null,
+                  "CreatedBy": null,
+                  "ApiUrl": "https://api-dev-pkg.azurewebsites.net",
+                  "ViewImageUrl": "https://web4id.phuckhangnet.vn",
+                  "TokenEnvs": []
+              },
+              "message": "Environment App found",
+              "statusCode": 200
+          }

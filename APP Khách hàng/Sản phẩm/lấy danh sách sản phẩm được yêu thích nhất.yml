@@ -1,0 +1,30 @@
+info:
+  name: lấy danh sách sản phẩm được yêu thích nhất
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/sanPham/lay-thong-tin-san-pham-yeu-thich"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idKhachHang":990,
+          "pageSize":20,
+          "pageNumber":1,
+          "price":"desc",
+          "like":"desc"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

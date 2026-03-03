@@ -1,0 +1,31 @@
+info:
+  name: Get danh sách nhân viên
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/Employee/GetDanhSachNhanVien"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  params:
+    - name: x-api-key
+      value: "{{apiKey}}"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "idCuaHang":1
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

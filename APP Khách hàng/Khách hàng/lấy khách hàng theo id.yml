@@ -1,0 +1,26 @@
+info:
+  name: lấy khách hàng theo id
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/customer/chi-tiet-khach-hang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idKhachHang": 909
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

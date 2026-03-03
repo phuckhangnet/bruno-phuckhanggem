@@ -1,0 +1,31 @@
+info:
+  name: Khách hàng đăng nhập
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/Auth/khach-hang/dang-nhap"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+      "tokenNofitication":"test",
+      "ho":"pham",
+      "ten":"hau",
+      "soDienThoai":"0967900801",
+      "matKhau":"1111"
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

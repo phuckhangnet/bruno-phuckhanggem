@@ -1,0 +1,7 @@
+info:
+  name: (new)Quản lí sản phẩm
+  type: folder
+  seq: 12
+
+request:
+  auth: inherit

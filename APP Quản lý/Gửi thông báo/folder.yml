@@ -1,0 +1,7 @@
+info:
+  name: Gửi thông báo
+  type: folder
+  seq: 16
+
+request:
+  auth: inherit

@@ -1,0 +1,7 @@
+info:
+  name: Quản lý files upload
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

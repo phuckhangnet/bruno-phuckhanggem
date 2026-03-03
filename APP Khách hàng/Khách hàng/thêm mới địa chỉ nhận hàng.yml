@@ -1,0 +1,40 @@
+info:
+  name: thêm mới địa chỉ nhận hàng
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/customer/them-dia-chi-nhan-hang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+        "idKhachHang": 721,
+        "ho": "check-trung-dt-1",
+        "ten": "Bối",
+        "dienThoai": "0984357636",
+        "email": "ttt.nguyenkim@gmail.com",
+        "diaChi": "40 A 40B Út Tích",
+        "thanhPho": "P. Nguyễn Thái Bình, Q. 1, TP. Hồ Chí Minh, ZIP: 71010",
+        "maBang": "71",
+        "maQuocGia": "VN",
+        "tenBang": "TP. Hồ Chí Minh",
+        "tenQuan": "Q. 1",
+        "tenQuocGia": "Viet Nam",
+        "macDinh":true
+
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

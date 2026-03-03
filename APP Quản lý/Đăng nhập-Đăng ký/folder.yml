@@ -1,0 +1,7 @@
+info:
+  name: Đăng nhập/Đăng ký
+  type: folder
+  seq: 17
+
+request:
+  auth: inherit

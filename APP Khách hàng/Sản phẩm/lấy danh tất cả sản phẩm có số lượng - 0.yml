@@ -1,0 +1,31 @@
+info:
+  name: lấy danh tất cả sản phẩm có số lượng > 0
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/sanPham/lay-tac-ca"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          // "idKhachHang":870,
+          "pageSize":20,
+          "pageNumber":1,
+          "price":"desc",
+          "like":"desc",
+          "keyword":""
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

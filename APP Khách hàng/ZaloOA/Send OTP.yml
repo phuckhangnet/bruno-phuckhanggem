@@ -1,0 +1,21 @@
+info:
+  name: Send OTP
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url_old}}/ZaloOA/SendOTPZaloOA"
+  body:
+    type: json
+    data: |
+      {
+         "phoneNumber":"0967900801"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

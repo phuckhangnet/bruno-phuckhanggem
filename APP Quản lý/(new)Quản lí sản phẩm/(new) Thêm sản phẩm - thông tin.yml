@@ -1,0 +1,43 @@
+info:
+  name: (new) Thêm sản phẩm - thông tin
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/ProductWarehouse/them-thong-tin-san-pham"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "cao": 0,
+          "dai": 0,
+          "giaban": 230000,
+          "giamgia": 101,
+          "giatritiente": "&#8363",
+          "idSanPham": 1371,
+          "idcuahang": 0,
+          "iddonvitinh": 3,
+          "idnguoidung": "000",
+          "khoiluong": 100,
+          "mota": "",
+          "motangan": "",
+          "rong": 0,
+          "sanphamtructuyen": 1,
+          "soluong": 1,
+          "tensanpham": "Test 25",
+          "thoigianbaohanh": -1,
+          "trigia": 0
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

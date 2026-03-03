@@ -1,0 +1,34 @@
+info:
+  name: Báo cáo doanh thu theo khách hàng có ngày sinh nhật POST
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/Report/BaoCaoDoanhThuKhachHangCoSinhNhatTrongKhoangThoiGian"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  params:
+    - name: top
+      value: "10"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "idNguoiDung": 11,
+          "tuNgay": "2025-02-20",
+          "denNgay": "2025-02-20",
+          "storeId": 0
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

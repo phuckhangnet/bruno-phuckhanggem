@@ -1,0 +1,37 @@
+info:
+  name: Delete product images
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/ProductImage/EditProductImage"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: multipart-form
+    data:
+      - name: folder
+        type: text
+        value: products
+      - name: filesDeleted
+        type: text
+        value: 1165_2.jpeg,1165_3.png
+      - name: filesUpdated
+        type: file
+        value:
+          - postman-cloud:///1ef9272e-a129-4c70-a357-d62f79b622b1
+      - name: filesUpdated
+        type: file
+        value:
+          - postman-cloud:///1ef9272e-a129-4c70-a357-d62f79b622b1
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,198 @@
+info:
+  name: Cập nhật cửa hàng
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{url}}/Store/Update"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: multipart-form
+    data:
+      - name: capDoCuaHang
+        type: text
+        value: "1"
+      - name: idCuaHangCha
+        type: text
+        value: "0"
+      - name: image
+        type: file
+        value:
+          - /Users/hauphvn/Desktop/opengraph-image.jpg
+        disabled: true
+      - name: fileType
+        type: text
+        value: image/JPG
+        disabled: true
+      - name: maCuaHang
+        type: text
+        value: hau
+      - name: tenCuaHang
+        type: text
+        value: hau store5
+      - name: diaChiCuaHang
+        type: text
+        value: 111 Le hong phong
+      - name: dienThoaiCuaHang
+        type: text
+        value: "097684859"
+      - name: diaChiWebCuaHang
+        type: text
+        value: hausite.com
+      - name: emailCuaHang
+        type: text
+        value: hau@gmail.com
+      - name: tenNguoiDaiDienCuaHang
+        type: text
+        value: hau2
+      - name: maQuocGia
+        type: text
+        value: VN
+      - name: maBang
+        type: text
+        value: "78"
+      - name: thanhPho
+        type: text
+        value: P. 1, TP. Vũng Tàu, Bà Rịa - Vũng Tàu
+      - name: tenQuocGia
+        type: text
+        value: Viet Na
+      - name: tenBang
+        type: text
+        value: Bà Rịa - Vũng Tàu
+      - name: tenQuan
+        type: text
+        value: TP. Vũng Tàu
+      - name: idCuaHang
+        type: text
+        value: "43"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Cap nhat cua hang
+    request:
+      url: "{{url}}/Store/Update"
+      method: PUT
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: multipart-form
+        data:
+          - name: capDoCuaHang
+            type: text
+            value: "1"
+          - name: idCuaHangCha
+            type: text
+            value: "0"
+          - name: image
+            type: file
+            value:
+              - /Users/hauphvn/Desktop/opengraph-image.jpg
+            disabled: true
+          - name: fileType
+            type: text
+            value: image/JPG
+            disabled: true
+          - name: maCuaHang
+            type: text
+            value: hau
+          - name: tenCuaHang
+            type: text
+            value: hau store5
+          - name: diaChiCuaHang
+            type: text
+            value: 111 Le hong phong
+          - name: dienThoaiCuaHang
+            type: text
+            value: "097684859"
+          - name: diaChiWebCuaHang
+            type: text
+            value: hausite.com
+          - name: emailCuaHang
+            type: text
+            value: hau@gmail.com
+          - name: tenNguoiDaiDienCuaHang
+            type: text
+            value: hau2
+          - name: maQuocGia
+            type: text
+            value: VN
+          - name: maBang
+            type: text
+            value: "78"
+          - name: thanhPho
+            type: text
+            value: P. 1, TP. Vũng Tàu, Bà Rịa - Vũng Tàu
+          - name: tenQuocGia
+            type: text
+            value: Viet Na
+          - name: tenBang
+            type: text
+            value: Bà Rịa - Vũng Tàu
+          - name: tenQuan
+            type: text
+            value: TP. Vũng Tàu
+          - name: idCuaHang
+            type: text
+            value: "43"
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 10:02:52 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Update store successfully",
+              "metadata": {
+                  "IdcuaHang": 43,
+                  "MaCuaHang": "HAU",
+                  "TenCuaHang": "HAU STORE5",
+                  "Urllogo": "/_imageslibrary/stores/43.png",
+                  "DiaChiCuaHang": "111 Le hong phong",
+                  "DienThoaiCuaHang": "097684859",
+                  "EmailCuaHang": "hau@gmail.com",
+                  "TenNguoiDaiDienCuaHang": "hau2",
+                  "DiaChiWebCuaHang": "hausite.com",
+                  "IdcuaHangCha": 0,
+                  "CapDoCuaHang": 1,
+                  "ThanhPho": "P. 1, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
+                  "MaBang": "78",
+                  "MaQuocGia": "VN",
+                  "TenBang": "Bà Rịa - Vũng Tàu",
+                  "TenQuocGia": "Viet Na",
+                  "TenQuan": "TP. Vũng Tàu",
+                  "MaMau": "#FFFFFF",
+                  "DonHangNhaps": [],
+                  "KhachHangs": [],
+                  "PrintLabels": []
+              },
+              "statusCodes": 200
+          }

@@ -1,0 +1,30 @@
+info:
+  name: Báo cáo sản phẩm được yêu thích POST
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/Report/BaoCaoSanPhamYeuThich"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |
+      {
+         "idNguoiDung": 16,
+        "tuNgay": "2025-02-20",
+        "denNgay": "2025-02-20",
+        "storeId": 0,
+        "top": 100
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: lấy ds sản phẩm nổi bật nhất
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/sanPham/lay-danh-sach-san-pham-noi-bat-nhat"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "price":"desc",
+          "like":"desc"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

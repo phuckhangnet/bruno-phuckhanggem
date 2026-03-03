@@ -1,0 +1,123 @@
+info:
+  name: Thanh toan
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/Common/ThanhToan"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "loaidonhang": "Zalo mini app",
+          "dienthoai": "0967900801",
+          "dienthoainhan": "0967900801",
+          "idkhachhang":1048,
+          "tenkhachhang": "TEST Hau",
+          "maquocgia": "VN",
+          "tenquocgia": "Viet Nam",
+          "mabang": "11",
+          "thanhpho": "TP. Hà Nội",
+          "tenbang": "TP. Hà Nội",
+          "tenquan": "TXã Sơn Tây",
+          "diachi": "Test",
+          "hinhthucnhanhang": 1,
+          "hinhthucthanhtoan": 1,
+          "dichvucongthem": [],
+          "ghichu": "",
+          "magiamgia": null,
+          "nhantaicuahang": 3,
+          "donhanglienhe":0,
+          "magiamgias": null,
+          "email": "hauphvn@gmail.com",
+          "ho": "TEST",
+          "ten": "Hau",
+          "sanphamdachon": [
+              {
+                  "id": 775,
+                  "soluongdachon": 1,
+                  "soluongtrukho": -1,
+                  "giaban": 3000000,
+                  "giasaugiam": 3000000,
+                  "tonggiaban": 3000000,
+                  "thoigianbaohanh": -1,
+                  "khoiluong": 0,
+                  "giamgiatien": 0,
+                  "ghichutang": ""
+              },
+              {
+                  "id": 738,
+                  "soluongdachon": 1,
+                  "soluongtrukho": -1,
+                  "giaban": 3000000,
+                  "giasaugiam": 3000000,
+                  "tonggiaban": 3000000,
+                  "thoigianbaohanh": -1,
+                  "khoiluong": 0,
+                  "giamgiatien": 0,
+                  "ghichutang": ""
+              }
+          ],
+          "phiship": 50000,
+          "sotiengiam": 0,
+          "tongtien": 3050000,
+          "tiengiaohang": 3000000
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetSanPham
+    request:
+      url: "{{url}}/Common/BaoCaoThuChi"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "loai":1,
+              "tungay":"2024-11-12",
+              "denngay":"2024-11-18"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:28:46 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "success": "00",
+                  "msgErr": ""
+              }
+          ]

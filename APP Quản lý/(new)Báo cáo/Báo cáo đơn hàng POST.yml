@@ -1,0 +1,30 @@
+info:
+  name: Báo cáo đơn hàng POST
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/Report/BaoCaoDonHangTheoNgay"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |
+      {
+      //    ?idNguoiDung=69&tuNgay=2024-01-01&denNgay=2024-12-31&storeId=0,1,2
+       "idNguoiDung": 11,
+        "tuNgay": "2025-01-01",
+        "denNgay": "2025-12-31",
+      //   "storeId": "0"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

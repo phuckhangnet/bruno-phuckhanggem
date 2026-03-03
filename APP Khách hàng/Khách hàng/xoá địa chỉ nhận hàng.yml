@@ -1,0 +1,27 @@
+info:
+  name: xoá địa chỉ nhận hàng
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/customer/xoa-dia-chi-nhan-hang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+      "idDiaChiNhanHang":1304
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

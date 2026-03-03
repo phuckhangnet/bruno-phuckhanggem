@@ -1,0 +1,82 @@
+info:
+  name: Cập nhật thông tin nhân viên cửa hàng
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/Employee/CapNhatThongTinNhanVien"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idCuaHang":0,
+          "idVaiTro":1,
+           "idNguoiDung": 135.0
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Cập nhật thông tin nhân viên cửa hàng
+    request:
+      url: "{{url}}/Employee/CapNhatThongTinNhanVien"
+      method: PUT
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "idNguoiDung":135,
+              "idCuaHang":0,
+              "ngaySinhNhat":"1994-06-12",
+              "cmnd":"272459990",
+              "idVaiTro":1
+              
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:50:58 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Update staff info success",
+              "metadata": {
+                  "idNguoiDung": 103,
+                  "taiKhoan": "minhtest123",
+                  "ho": "Lê đức",
+                  "ten": "Minh test",
+                  "soDienThoai": "00987654323",
+                  "email": "míntesst1@gmail.com"
+              },
+              "statusCodes": 200
+          }

@@ -1,0 +1,89 @@
+info:
+  name: Tạo mới nhân viên cửa hàng
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/Employee/ThemNhanVien"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "idNguoiTao":1 ,
+        "ho": "Minh",
+        "ten": "Minh",
+        "taiKhoan": "hauphvn4",
+      //   "matKhau":"123456",
+        "idCuaHang": 0,
+        "soDienThoai":"0967900804",
+        "ngaySinhNhat": "2025-02-18",
+        "email": "hauphvn4@gmail.com",
+        "cmnd": "123456789",
+        "idvaitro": 1
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ThemNhanVien
+    request:
+      url: "{{url}}/Employee/ThemNhanVien"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "ho":"Pham van",
+              "ten":"apple4",
+              "taiKhoan":"app5",
+              "matKhau":"123456"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:49:54 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Create new user success",
+              "metadata": {
+                  "idNguoiDung": 129,
+                  "taiKhoan": "app5",
+                  "ho": "Pham van",
+                  "ten": "apple4",
+                  "soDienThoai": "[app5]-Auto",
+                  "matKhau": "123456",
+                  "email": "app5@phuckhangnet.com"
+              },
+              "statusCodes": 201
+          }

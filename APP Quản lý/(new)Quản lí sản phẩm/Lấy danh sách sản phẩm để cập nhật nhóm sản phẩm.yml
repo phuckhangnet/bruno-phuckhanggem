@@ -1,0 +1,29 @@
+info:
+  name: Lấy danh sách sản phẩm để cập nhật nhóm sản phẩm
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/ProductWarehouse/shortlist/san-pham-kho"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          // "IdCuaHang":0, //(tuỳ chọn)
+          "pageSize": 20,
+          "pageNumber": 1,
+          "keyword": "" //(tuỳ chọn)
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

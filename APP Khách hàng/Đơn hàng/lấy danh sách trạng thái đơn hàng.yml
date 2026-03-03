@@ -1,0 +1,23 @@
+info:
+  name: lấy danh sách trạng thái đơn hàng
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/customer/don-hang/danh-sach-trang-thai"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

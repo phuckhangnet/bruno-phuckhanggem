@@ -1,0 +1,33 @@
+info:
+  name: lấy tấc cả sản phẩm
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/Common/GetSanPham"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "loai": 5,
+          "idcuahang": "0",
+          "keyword": "",
+          "idvaitro": "1",
+          "sotrang": 1,
+          "soitem": 10,
+          "soluongsanpham": null,
+          "idnhomsanpham":null
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

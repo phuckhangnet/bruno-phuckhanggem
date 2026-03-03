@@ -1,0 +1,25 @@
+info:
+  name: Khách hàng xác thực OTP Zalo
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/otp/khach-hang/verify"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |
+      {
+         "phoneNumber":"0967900801",
+         "otpCode":"791244"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

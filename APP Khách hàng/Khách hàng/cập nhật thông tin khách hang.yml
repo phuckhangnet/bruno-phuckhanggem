@@ -1,0 +1,30 @@
+info:
+  name: cập nhật thông tin khách hang
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/customer/chi-tiet-khach-hang/cap-nhat"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |+
+      {
+      "ho":"Pham 3",
+      "email":"1hauphvn2a3@gmail.com",
+      "dienThoai":"0967888786",
+      "idKhachHang":7
+      }
+
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

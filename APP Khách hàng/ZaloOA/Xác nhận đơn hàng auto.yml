@@ -1,0 +1,35 @@
+info:
+  name: Xác nhận đơn hàng auto
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url_old}}/ZaloOA/SendMessageZaloOA"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  params:
+    - name: x-api-
+      value: "{{apiKey}}"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      
+      {
+        "loai": "A02",
+        "creator_id": "value_for_creator_id",
+        "template_id": "327082",
+        "phone": "0967900801",
+        "order_code": "value_for_order_code",
+        "tracking_id": "value_for_tracking_id"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

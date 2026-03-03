@@ -1,0 +1,26 @@
+info:
+  name: (new) Cập nhật thông tin nhóm sp
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/ProductWarehouse/UpdateProductGroup"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {"idSanPham": 1300, 
+      "idsNhomSanPham":[1,999]
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

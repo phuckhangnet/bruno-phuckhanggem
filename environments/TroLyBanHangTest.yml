@@ -1,0 +1,12 @@
+name: TroLyBanHangTest
+variables:
+  - name: token
+    value: ""
+  - name: url
+    value: https://testpkg.ngoanthachviet.com/api/v2
+  - name: url_old
+    value: https://testpkg.ngoanthachviet.com/api
+  - name: apiKey
+    value: pkn
+  - name: url_temp
+    value: https://apipkg.onrender.com/api/v2

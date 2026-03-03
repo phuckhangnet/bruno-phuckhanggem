@@ -1,0 +1,31 @@
+info:
+  name: lấy tấc cả
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/nhomSanPham/layTacCa"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  params:
+    - name: x-api-key
+      value: "{{apiKey}}"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "idCuaHang":0
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
