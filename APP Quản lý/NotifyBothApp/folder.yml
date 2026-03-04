@@ -1,0 +1,7 @@
+info:
+  name: NotifyBothApp
+  type: folder
+  seq: 19
+
+request:
+  auth: inherit

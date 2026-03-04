@@ -1,0 +1,21 @@
+info:
+  name: TestSendNotify
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/TestNotifyBoth/send-to-customer"
+  body:
+    type: json
+    data: |-
+      {
+        "token":"cqu6ekfIvU3SgpQ-XAkSYY:APA91bGAgz22-TdiR9y5w5_93LI48Od6WaAeH0VyzcYWhqDL-zYhV-v_GoTtNNumCN6G1Dp4IMMVHn0Btb82ojPmeSeombLi9u9p_zneGv2d4-MZFQkVaJI"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

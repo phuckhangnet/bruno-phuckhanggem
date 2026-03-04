@@ -17,14 +17,15 @@ http:
         value: products
       - name: productId
         type: text
-        value: "1504"
+        value: "1570"
       - name: shortDescription
         type: text
         value: Hau test mo ta ngan update
+        disabled: true
       - name: filesUpdated
         type: file
         value:
-          - postman-cloud:///1ef9272e-a129-4c70-a357-d62f79b622b1
+          - /Users/hauphvn/Desktop/_1.jpeg
   auth:
     type: bearer
     token: "{{token}}"

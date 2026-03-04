@@ -13,8 +13,8 @@ http:
     type: json
     data: |-
       {
-          "userId":77,
-          "oldPassword":"888584",
+          "userId":11,
+          "oldPassword":"469153",
           "newPassword":"123456"
       }
   auth:
