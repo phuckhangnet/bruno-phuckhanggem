@@ -1,11 +1,11 @@
 info:
-  name: Tìm kiếm đơn hàng
+  name: Lấy danh sách lịch hẹn xử lý đơn hàng
   type: http
   seq: 1
 
 http:
   method: POST
-  url: "{{url_old}}/order/TimKiemDonHang"
+  url: "{{url}}/HenNgayXuLyDon/LayDanhSachLichXuLy"
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
@@ -13,12 +13,9 @@ http:
     type: json
     data: |-
       {
-          "loai": 2,
-          "chuoitimkiem":"",
-        "idnguoidung":8,
-          "idcuahang":0,
-        "tungay": "2026-03-01",
-        "denngay": "2026-03-07"
+        "SearchTerm": "",
+        "StartDate": "2026-03-01",
+        "EndDate": "2026-03-30",
       }
   auth:
     type: bearer

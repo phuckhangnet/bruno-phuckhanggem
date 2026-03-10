@@ -10,3 +10,5 @@ variables:
     value: pkn
   - name: url_temp
     value: https://apipkg.onrender.com/api/v2
+  - name: userIdLogin
+    value: "11"

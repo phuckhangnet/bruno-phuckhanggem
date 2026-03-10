@@ -9,14 +9,16 @@ http:
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
+    - name: from
+      value: oldApp
   body:
     type: json
     data: |-
       {
-          "TokenNofitication": "TokenNofitication",
+          "TokenNofitication": "enmAx9RkeE4XjPuFeX2qSf:APA91bG3_RPdzmvVrUlSpQJ5xLimVZNbwUkQXhlrjmI_yyKWZYZ7qHd3jZWb2g93Nv3-Hs5ZDjfoBplkXpuArRijvegE65n-JbePd7doCC5o-9TJ8bFfKxs",
           "DeviceId": "postman",
           "Account": "hauphvn",
-          "Password": "552916"
+          "Password": "123456"
       }
   auth: inherit
 

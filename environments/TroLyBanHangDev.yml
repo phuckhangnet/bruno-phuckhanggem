@@ -1,10 +1,12 @@
 name: TroLyBanHangDev
 variables:
-  - name: token
-    value: ""
   - name: url
     value: http://localhost:7234/api/v2
   - name: url_old
     value: http://localhost:7234/api
   - name: apiKey
     value: pkn
+  - secret: true
+    name: token
+  - name: userIdLogin
+    value: "11"

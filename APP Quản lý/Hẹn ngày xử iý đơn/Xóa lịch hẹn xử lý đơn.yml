@@ -1,0 +1,194 @@
+info:
+  name: Xóa lịch hẹn xử lý đơn
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/HenNgayXuLyDon/XoaLichXuLy"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+  body:
+    type: json
+    data: |-
+      {
+        "IdXuLyDon":[1,2]
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Kết quả Tạo đơn hàng[Có tuỳ chọn tạo hoá đơn]
+    request:
+      url: "{{url_old}}/Common/TaoDonHang"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          
+          {
+               // Thông tin về việc xuất hoá đơn 
+              "yeucauxuathoadon":true,
+              "hoadon_hotennguoimua":"Phạm văn A",
+              "hoadon_masothue":"123456789", // từ 9 ki tu
+              "hoadon_email":"phamvana@email.email",
+              "hoadon_dienthoai":"123456789",
+              "hoadon_diachi":"123 Vo thi sau, HCM",
+              "hoadon_tencongty":"Cong ty a",
+              "hoadon_lacongty":true,
+
+
+              // Thông tin đơn hàng
+              "donhanglienhe": 2,
+              "loaidonhang": "App PKN4ID",
+              "dienthoai": "0984357636",
+              "dienthoainhan": "0984357636",
+              "email": "Tvsuongit@gmail.com",
+              "tenkhachhang": "Trần Văn Sướng",
+              "maquocgia": "VN",
+              "mabang": "71",
+              "tenbang": "TP. Hồ Chí Minh",
+              "tenquan": "Q. 4",
+              "tenquocgia": "Viet Nam",
+              "zipcode": "P. 15, Q. 4, TP. Hồ Chí Minh, ZIP: 72817",
+              "thanhpho": "P. 15, Q. 4, TP. Hồ Chí Minh, ZIP: 72817",
+              "diachi": "293/1 Tôn Đản",
+              "hinhthucnhanhang": 1,
+              "manhavanchuyen": "GHTK",
+              "hinhthucthanhtoan": 1,
+              "dichvucongthem": "[{\"ID\":1,\"SoLuong\":1,\"DonGia\":0,\"IDChiTietDichVuCongThem\":\"\"},{\"ID\":2,\"SoLuong\":1,\"DonGia\":0,\"IDChiTietDichVuCongThem\":\"\"},{\"ID\":3,\"SoLuong\":2,\"DonGia\":100000,\"IDChiTietDichVuCongThem\":\"\"}]",
+              "ghichu": "Ghi chú đơn hàng",
+              "ghichudichvucongthem": "",
+              "sanphamdachon": [
+                  {
+                      "id": 545,
+                      "soluongtrukho": -2,
+                      "soluongdachon": 2,
+                      "giaban": 100000,
+                      "giasaugiam": 90000,
+                      "thoigianbaohanh": -1,
+                      "khoiluong": 0,
+                      "giamgiatien": 10000,
+                      "ghichutang": "[{\"IDMoiQuanHe\":0,\"IDKhachHang\":996,\"MoiQuanHe\":\"Bản thân\",\"HoTen\":\"Trần Văn Sướng\",\"GioiTinh\":-1,\"NgaySinh\":\"1994-06-12\",\"LoiNhan\":\"Ghi chú tặng dịch vụ cộng thêm\",\"QuaTang\":true,\"SanPhamGieoDuyen\":true,\"DichVuCongThem\":[{\"IDSanPham\":7,\"SoLuong\":1,\"IDChiTietDichVuCongThem\":\"1,2,4,5\"}],\"NoiDungDichVuCongThem\":\"Xin vía (Bất động sản, Công việc ổn định, Tài chính ổn định, Tài chính dồi dào)\"}]"
+                  },
+                  {
+                      "id": 458,
+                      "soluongtrukho": -1,
+                      "soluongdachon": 1,
+                      "giaban": 50000,
+                      "giasaugiam": 40000,
+                      "thoigianbaohanh": -1,
+                      "khoiluong": 0,
+                      "giamgiatien": 10000,
+                      "ghichutang": "[{\"IDMoiQuanHe\":13,\"IDKhachHang\":996,\"MoiQuanHe\":\"Chị\",\"HoTen\":\"Trần Thị Kim Phương\",\"NgaySinh\":\"1989-07-23T00:00:00\",\"LoiNhan\":\"Tặng  chị gái\",\"QuaTang\":true,\"SanPhamGieoDuyen\":true,\"DichVuCongThem\":[{\"IDSanPham\":7,\"SoLuong\":1,\"IDChiTietDichVuCongThem\":\"3,4,5,6,8,9\"}],\"NoiDungDichVuCongThem\":\"Xin vía (Công việc thăng tiến, Tài chính ổn định, Tài chính dồi dào, Bình an may mắn, Gia đạo an hòa, Vạn sự hanh thông)\"}]"
+                  }
+              ],
+              "ngaysinh": "1994-06-12",
+              "nhantaicuahang": 0,
+              "phiship": 20000,
+              "magiamgia": "",
+              "sotiengiam": 0,
+              "magiamgias": "",
+              "sotiengiamtrensanpham": 30000,
+              "idnguoithuchien": 12,
+              "ho": "Trần Văn",
+              "ten": "Sướng",
+              "vat": 44000,
+              "ngaydathang": "2025-12-25 14:40:19"
+
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Length
+          value: "1300"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Thu, 25 Dec 2025 08:37:53 GMT
+        - name: Server
+          value: Kestrel
+      body:
+        type: json
+        data: |-
+          {
+              "DonHang": [
+                  {
+                      "MaDonHang": "PK00004256",
+                      "HoTenNguoiNhan": "Trần Văn Sướng",
+                      "DiaChiNhan": "293/1 Tôn Đản | P. 15, Q. 4, TP. Hồ Chí Minh, ZIP: 72817",
+                      "DienThoaiKhachHang": "0984357636",
+                      "TongSoLuong": 3,
+                      "TongSoTien": 420000,
+                      "NgayDatHang": "25/12/2025",
+                      "GhiChu": "Ghi chú đơn hàng",
+                      "GhiChuDichVuCongThem": "",
+                      "TenHinhThucNhanHang": "Giao hàng",
+                      "MaNhaVanChuyen": "GHTK",
+                      "TenHinhThucThanhToan": "Giao hàng thu tiền",
+                      "IDNguoiThucHien": 12,
+                      "VAT": 44000,
+                      "SoTienGiam": 0,
+                      "PhiShip": 20000,
+                      "TenBangNhan": "TP. Hồ Chí Minh",
+                      "TenQuanNhan": "Q. 4",
+                      "Email": ""
+                  }
+              ],
+              "SanPham": [
+                  {
+                      "MaSanPham": "PPK00458",
+                      "TenSanPham": "Lắc Bạc Theo Tên",
+                      "SoLuong": 1,
+                      "ThanhTien": 40000,
+                      "NgayBatDauBaoHanh": null,
+                      "NgayHetHanBaoHanh": null
+                  },
+                  {
+                      "MaSanPham": "PPK00545",
+                      "TenSanPham": "Cây Tài Lộc Đá Aven ",
+                      "SoLuong": 2,
+                      "ThanhTien": 180000,
+                      "NgayBatDauBaoHanh": null,
+                      "NgayHetHanBaoHanh": null
+                  },
+                  {
+                      "MaSanPham": "F000001",
+                      "TenSanPham": "Gói bọc",
+                      "SoLuong": 1,
+                      "ThanhTien": 0,
+                      "NgayBatDauBaoHanh": "-",
+                      "NgayHetHanBaoHanh": "-"
+                  },
+                  {
+                      "MaSanPham": "F000002",
+                      "TenSanPham": "Gói quà",
+                      "SoLuong": 1,
+                      "ThanhTien": 0,
+                      "NgayBatDauBaoHanh": "-",
+                      "NgayHetHanBaoHanh": "-"
+                  },
+                  {
+                      "MaSanPham": "B000001",
+                      "TenSanPham": "Hologram",
+                      "SoLuong": 2,
+                      "ThanhTien": 200000,
+                      "NgayBatDauBaoHanh": "-",
+                      "NgayHetHanBaoHanh": "-"
+                  }
+              ],
+              "TrangThaiTaoHoaDon": true
+          }

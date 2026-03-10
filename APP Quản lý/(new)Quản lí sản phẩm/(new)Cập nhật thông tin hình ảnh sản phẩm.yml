@@ -26,9 +26,6 @@ http:
         type: file
         value:
           - /Users/hauphvn/Desktop/_1.jpeg
-  auth:
-    type: bearer
-    token: "{{token}}"
 
 settings:
   encodeUrl: true
