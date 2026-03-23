@@ -15,9 +15,10 @@ http:
     type: json
     data: |-
       {
-        "IdXuLyDon":[1,2],
-        "StartDate":"2026-03-09",
+        "IdXuLyDon":[3],
+        "StartDate":"2026-03-16",
         "EndDate":"2026-04-09",
+        "TrangThai":"", // Tùy chọn, có thể null, không truyền:  DANG_XU_LY, DA_HOAN_THANH, DA_HUY
       }
   auth:
     type: bearer

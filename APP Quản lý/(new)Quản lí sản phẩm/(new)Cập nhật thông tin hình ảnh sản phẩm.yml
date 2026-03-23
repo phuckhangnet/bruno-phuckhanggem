@@ -17,7 +17,7 @@ http:
         value: products
       - name: productId
         type: text
-        value: "1570"
+        value: "1569"
       - name: shortDescription
         type: text
         value: Hau test mo ta ngan update
@@ -25,7 +25,24 @@ http:
       - name: filesUpdated
         type: file
         value:
-          - /Users/hauphvn/Desktop/_1.jpeg
+          - /Users/hauphvn/Desktop/_1.png
+      - name: filesUpdated
+        type: file
+        value:
+          - /Users/hauphvn/Desktop/_2.png
+        disabled: true
+      - name: filesUpdated
+        type: text
+        value: ""
+        disabled: true
+      - name: filesUpdated
+        type: text
+        value: ""
+        disabled: true
+      - name: filesUpdated
+        type: text
+        value: ""
+        disabled: true
 
 settings:
   encodeUrl: true

@@ -1,7 +1,19 @@
 info:
   name: Hẹn ngày xử iý đơn
   type: folder
-  seq: 20
+  seq: 1
 
 request:
   auth: inherit
+
+docs:
+  content: |
+    
+    Data push notify firebase
+                        {
+                            { "IdDonHang", "111" },
+                            { "IdXuLy", "1" }, 
+                            { "Type", "LichXuLy" },
+                            { "ClickAction", "OPEN_ORDER_DETAIL" } 
+                        }
+  type: text/markdown
