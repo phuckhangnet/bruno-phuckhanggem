@@ -9,6 +9,8 @@ http:
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
   body:
     type: json
     data: |-
