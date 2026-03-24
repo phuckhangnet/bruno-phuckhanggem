@@ -16,6 +16,7 @@ http:
     data: |-
       {
         "IdNguoiDung": 57,
+        "app":"oldApp", // newApp
       }
   auth:
     type: bearer
