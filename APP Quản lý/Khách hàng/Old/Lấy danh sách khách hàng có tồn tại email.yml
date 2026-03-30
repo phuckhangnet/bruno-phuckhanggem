@@ -1,7 +1,7 @@
 info:
   name: Lấy danh sách khách hàng có tồn tại email
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: POST
