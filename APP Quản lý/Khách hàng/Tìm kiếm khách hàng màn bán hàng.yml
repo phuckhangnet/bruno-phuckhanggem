@@ -1,11 +1,11 @@
 info:
-  name: Danh sách khách hàng
+  name: Tìm kiếm khách hàng màn bán hàng
   type: http
-  seq: 2
+  seq: 3
 
 http:
   method: POST
-  url: "{{url}}/Customer/DanhSachKhachHang"
+  url: "{{url}}/Customer/TimKiemKhachHang"
   headers:
     - name: userIdLogin
       value: "{{userIdLogin}}"
@@ -15,12 +15,7 @@ http:
     type: json
     data: |-
       {
-        "searchTerm": "",
-        "status": "ACTIVE", //ACTIVE | LOCK
-        "pageNumber": 1,
-        "pageSize": 500,
-        "shortBy":"",// created_date, firstname, lastname
-        "isAscending":true
+        "searchTerm": "0967900801"
       }
   auth: inherit
 
