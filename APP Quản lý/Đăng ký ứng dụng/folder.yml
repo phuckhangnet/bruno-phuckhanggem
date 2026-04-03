@@ -1,7 +1,7 @@
 info:
   name: Đăng ký ứng dụng
   type: folder
-  seq: 14
+  seq: 16
 
 request:
   auth: inherit

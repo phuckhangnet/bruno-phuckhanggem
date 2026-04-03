@@ -1,7 +1,7 @@
 info:
   name: Quản lý cửa hàng
   type: folder
-  seq: 13
+  seq: 15
 
 request:
   auth: inherit

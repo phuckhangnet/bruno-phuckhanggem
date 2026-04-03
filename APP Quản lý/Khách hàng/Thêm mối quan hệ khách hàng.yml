@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "idKhachHang": 4326,
+        "idKhachHang": 1214,
         "relationships": [
           {
             "moiQuanHe": "Em Trai",

@@ -1,7 +1,7 @@
 info:
   name: Nhân viên
   type: folder
-  seq: 21
+  seq: 3
 
 request:
   auth: inherit
