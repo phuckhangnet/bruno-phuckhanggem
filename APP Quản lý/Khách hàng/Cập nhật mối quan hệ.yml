@@ -1,0 +1,31 @@
+info:
+  name: Cập nhật mối quan hệ
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/Customer/Admin/CapNhatMoiQuanHeKhachHang"
+  headers:
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "idMoiQuanHe": 286,
+        "moiQuanHe": "Vợ (Cập nhật)",
+        "hoTen": "Trần Thị A",
+        "gioiTinh": 0,
+        "ngaySinh": "1992-03-20T00:00:00Z",
+        "ghiChu": "Đã cập nhật số điện thoại liên hệ mới"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

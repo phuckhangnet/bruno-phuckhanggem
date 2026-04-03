@@ -1,0 +1,42 @@
+info:
+  name: Cập nhật khách hàng
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/Customer/Admin/CapNhatKhachHang"
+  headers:
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "idKhachHang": 1214,
+        "danhXung": "Ông",
+        "ho": "Nguyễn",
+        "ten": "CCC",
+        "gioitinh": 1,
+        "dienThoai": "0912345678",
+        "email": "tung.nguyen.updated@pkn.com.vn",
+        "ngaySinh": "1992-05-20T00:00:00Z",
+        "diaChi": "Lầu 10, Tòa nhà Bitexco, số 2 Hải Triều",
+        "thanhPho": "Hồ Chí Minh", // zipcode theo hệ thống cũ
+        "maBang": "HCM",
+        "maQuocGia": "VN",
+        "tenQuocGia": "Việt Nam",
+        "tenBang": "TP. Hồ Chí Minh",
+        "tenQuan": "Quận 1",
+        "ghiChu": "Khách hàng vừa cập nhật thông tin",
+        "cmnd": "079092001234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

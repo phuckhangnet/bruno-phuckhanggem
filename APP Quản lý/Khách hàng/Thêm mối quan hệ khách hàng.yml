@@ -1,0 +1,35 @@
+info:
+  name: Thêm mối quan hệ khách hàng
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/Customer/Admin/ThemMoiQuanHeKhachHang"
+  headers:
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "idKhachHang": 4326,
+        "relationships": [
+          {
+            "moiQuanHe": "Em Trai",
+            "hoTen": "Nguyễn Văn B",
+            "gioiTinh": 1,
+            "ngaySinh": "2000-01-01T00:00:00Z",
+            "ghiChu": "Sinh viên"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,53 @@
+info:
+  name: Thêm mới khách hàng
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/Customer/Admin/ThemMoiKhachHang"
+  headers:
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "danhXung": "Bà",
+        "ho": "Phạm Thị",
+        "ten": "Z",
+        "dienThoai": "0947711080",
+        "email": "zzz@pkn.com",
+        "diaChi": "Số 45, Ngõ 12, Phố Chùa Bộc, Quận Đống Đa",
+        "thanhPho": "Hà Nội", // zipcode theo hệ thống cũ
+        "maQuocGia": "VN",
+        "tenQuocGia": "Việt Nam",
+        "ngaySinh": "1992-11-25",
+        "gioitinh": 0,
+        "ghiChu": "Khách hàng  ghi chu",
+        "danhSachMoiQuanHe": [
+          {
+            "moiQuanHe": "Chồng",
+            "hoTen": "Lê A",
+            "gioiTinh": 1,
+            "ngaySinh": "1990-08-12T00:00:00Z",
+            "ghiChu": "Ghi chu moi quan he"
+          },
+          {
+            "moiQuanHe": "Mẹ",
+            "hoTen": "Nguyễn Thị Mai",
+            "gioiTinh": 0,
+            "ngaySinh": "1965-02-14T00:00:00Z",
+            "ghiChu": "Người nhận thay"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
