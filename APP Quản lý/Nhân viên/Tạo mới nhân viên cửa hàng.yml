@@ -1,0 +1,36 @@
+info:
+  name: Tạo mới nhân viên cửa hàng
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/Employee/ThemNhanVien"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |
+      {
+        "idNguoiTao":57 , // Nếu tạo mới từ đăng kí tài khoản thì không truyền.
+        "ho": "Minh",
+        "ten": "Minh",
+        "taiKhoan": "hauphvn6",
+        "matKhau":"123456",
+        "idCuaHang": 0,
+        "soDienThoai":"0900000002",
+        "ngaySinhNhat": "2025-02-18",
+        "email": "hauphvn6@gmail.com",
+        "cmnd": "123456789",
+        "idvaitro": 1
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

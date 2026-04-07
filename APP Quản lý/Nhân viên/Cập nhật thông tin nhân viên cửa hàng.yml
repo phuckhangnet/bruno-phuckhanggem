@@ -1,0 +1,36 @@
+info:
+  name: Cập nhật thông tin nhân viên cửa hàng
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/Employee/CapNhatThongTinNhanVien"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+        "idNguoiDung":59,
+        "ho": "Minh1",
+        "ten": "Minh1",
+        "taiKhoan": "hauphvn5",
+      //   "matKhau":"123456",
+        "idCuaHang": 0,
+        "soDienThoai":"0900000001",
+        "ngaySinhNhat": "2025-02-18",
+        "email": "hauphvn5@gmail.com",
+        "cmnd": "123456789",
+        "idvaitro": 1
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

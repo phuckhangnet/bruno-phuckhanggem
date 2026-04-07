@@ -1,7 +1,7 @@
 info:
   name: Danh sách nhân viên gửi thông báo
   type: http
-  seq: 2
+  seq: 4
 
 http:
   method: POST

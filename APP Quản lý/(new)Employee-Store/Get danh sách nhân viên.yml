@@ -1,7 +1,7 @@
 info:
   name: Get danh sách nhân viên
   type: http
-  seq: 4
+  seq: 2
 
 http:
   method: POST

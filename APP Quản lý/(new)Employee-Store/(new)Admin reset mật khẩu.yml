@@ -1,7 +1,7 @@
 info:
   name: (new)Admin reset mật khẩu
   type: http
-  seq: 3
+  seq: 1
 
 http:
   method: POST
@@ -26,54 +26,3 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-
-examples:
-  - name: DatLaiMatKhau
-    request:
-      url: "{{url}}/Employee/DatLaiMatKhau"
-      method: POST
-      headers:
-        - name: x-api-key
-          value: "{{apiKey}}"
-      body:
-        type: json
-        data: |-
-          {
-              "taiKhoanReset":"0987654328",
-              "idNguoiTao": 0
-          }
-    response:
-      statusText: "200"
-      headers:
-        - name: Content-Type
-          value: application/json; charset=utf-8
-        - name: Date
-          value: Tue, 19 Nov 2024 09:51:26 GMT
-        - name: Server
-          value: Microsoft-IIS/10.0
-        - name: Content-Encoding
-          value: gzip
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Vary
-          value: Accept-Encoding
-        - name: Request-Context
-          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
-        - name: X-Powered-By
-          value: ASP.NET
-      body:
-        type: json
-        data: |-
-          {
-              "message": "Reset password success",
-              "metadata": {
-                  "idNguoiDung": 69,
-                  "taiKhoan": "0987654328",
-                  "ho": "Hau",
-                  "ten": "Pham",
-                  "soDienThoai": "0987654328",
-                  "matKhau": "508301",
-                  "email": "hauphvn@gmail.com"
-              },
-              "statusCodes": 200
-          }
