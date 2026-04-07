@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "IdKhachHang": 1214
+        "IdKhachHang": 1219
       }
   auth: inherit
 

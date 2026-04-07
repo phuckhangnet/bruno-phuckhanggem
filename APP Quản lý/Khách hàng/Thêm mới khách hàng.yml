@@ -18,10 +18,13 @@ http:
         "danhXung": "Bà",
         "ho": "Phạm Thị",
         "ten": "Z",
-        "dienThoai": "0947711080",
-        "email": "zzz@pkn.com",
-        "diaChi": "Số 45, Ngõ 12, Phố Chùa Bộc, Quận Đống Đa",
-        "thanhPho": "Hà Nội", // zipcode theo hệ thống cũ
+        "dienThoai": "0960000002",
+        "email": "haucreate2@pkn.com.vn",
+        "diaChi": "111 Bùi Viện, Đa Kao",
+        "maBang":"71",
+        "tenBang":"TP. Hồ Chí Minh",
+        "tenQuan":"Q. 1",
+        "thanhPho": "Phường Đa Kao, Quận 1, Hcm", // zipcode theo hệ thống cũ
         "maQuocGia": "VN",
         "tenQuocGia": "Việt Nam",
         "ngaySinh": "1992-11-25",
