@@ -15,7 +15,8 @@ http:
     type: json
     data: |-
       {
-          "IdDonHang": 4260}
+          "IdDonHang": 4387
+      }
   auth:
     type: bearer
     token: "{{token}}"

@@ -20,8 +20,8 @@ http:
           "PageNumber": 1,
           "PageSize": 10,
           "Status": "", // KHONG_CHON_XUAT_HOA_DON | CHON_XUAT_HOA_DON
-          "FromDate": "2026-01-07",
-          "ToDate": "2026-01-30"
+          "FromDate": "2026-04-20",
+          "ToDate": "2026-04-30"
       }
   auth:
     type: bearer

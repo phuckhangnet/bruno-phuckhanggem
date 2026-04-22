@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "searchTerm": "0979127799",
+        "searchTerm": "",
         "status": "ACTIVE", //ACTIVE | LOCK
         "pageNumber": 1,
         "pageSize": 500,

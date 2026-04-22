@@ -9,6 +9,8 @@ http:
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
+    - name: scope
+      value: customer
   body:
     type: json
     data: |-

@@ -16,12 +16,12 @@ http:
         "idNguoiTao":57 , // Nếu tạo mới từ đăng kí tài khoản thì không truyền.
         "ho": "Minh",
         "ten": "Minh",
-        "taiKhoan": "hauphvn6",
+        "taiKhoan": "hauphvn14",
         "matKhau":"123456",
         "idCuaHang": 0,
-        "soDienThoai":"0900000002",
+      //   "soDienThoai":"0000000099",
         "ngaySinhNhat": "2025-02-18",
-        "email": "hauphvn6@gmail.com",
+      //   "email": "",
         "cmnd": "123456789",
         "idvaitro": 1
       }

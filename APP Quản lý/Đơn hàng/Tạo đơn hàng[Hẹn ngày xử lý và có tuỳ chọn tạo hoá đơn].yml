@@ -25,7 +25,7 @@ http:
           "hoadon_lacongty":true,
           
           // Số ngày xử lý đơn hàng đặt biệt:
-          "songaydenhanxulydonhang":2,
+      //     "songaydenhanxulydonhang":2,
 
           // Thông tin đơn hàng
           "donhanglienhe": 2,
@@ -83,7 +83,7 @@ http:
           "ho": "Trần",
           "ten": "A",
           "vat": 44000,
-          "ngaydathang": "2026-01-16 10:38:19"
+          "ngaydathang": "2026-04-21 11:38:19"
 
       }
   auth:

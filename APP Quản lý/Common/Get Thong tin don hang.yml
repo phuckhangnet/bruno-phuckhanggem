@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/Common/GetThongTinDonHang"
+  url: "{{url_old}}/Common/GetThongTinDonHang"
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
@@ -13,13 +13,13 @@ http:
     type: json
     data: |-
       {
-          "loai": 12,
+          "loai": 16,
           // "loai": 16, //  -- lấy danh sách đơn hàng YÊU CẦU HỦY XÁC NHẬN theo trạng thái MAX
-          "iddonhang": 1299,
-          "idcuahang": 0
-          // "trangthaiyeucau": "1",
-          // "tungay": "2024-02-01",
-          // "denngay": "2025-03-30"
+      //     "iddonhang": 1299,
+          "idcuahang": 0,
+          "trangthaiyeucau": "0",
+          "tungay": "2026-04-01",
+          "denngay": "2026-04-14"
       }
       // {"chuoitimkiem": "", "idcuahang": 0, "idvaitro": 1, "loai": 24, "soitem": 10, "sotrang": 1}
   auth:
