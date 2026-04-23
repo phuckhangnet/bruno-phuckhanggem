@@ -1,20 +1,24 @@
 info:
-  name: Lấy danh sách đơn hàng đã yêu càu
+  name: Xóa hóa đơn tạm
   type: http
-  seq: 2
+  seq: 16
 
 http:
   method: POST
-  url: "{{url_temp}}/DataManagement/GetRequestedInvoices"
+  url: "{{url}}/DataManagement/CancelTemporaryInvoice"
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
     - name: userIdLogin
-      value: "1"
-      disabled: true
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
   body:
     type: json
-    data: ""
+    data: |-
+      {
+        "IdHoaDon": 8
+      }
   auth:
     type: bearer
     token: "{{token}}"
